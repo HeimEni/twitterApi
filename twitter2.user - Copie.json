@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "666b3836cd722090ddc5f9dc"
+  },
+  "username": "username",
+  "password": "password",
+  "bio": "This is a Biography",
+  "followers": [],
+  "follows": [],
+  "created_at": null
+}]

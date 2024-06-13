@@ -1,0 +1,250 @@
+[{
+  "_id": {
+    "$oid": "666b391dcd722090ddc5f9ee"
+  },
+  "id_tweet": null,
+  "id_user": null
+},
+{
+  "_id": {
+    "$oid": "666b41d38c65fa7b6eec90f5"
+  },
+  "likes": {
+    "id_user": "user_id_12345",
+    "id_tweet": "666b3883cd722090ddc5f9e4"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b41d88c65fa7b6eec90f6"
+  },
+  "likes": {
+    "id_user": "user_id_12345",
+    "id_tweet": "666b3883cd722090ddc5f9e4"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b437e4f3b8a2c8d8c45e9"
+  },
+  "likes": {
+    "id_user": "user_id_12345",
+    "id_tweet": "666b3883cd722090ddc5f9e4"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b43814f3b8a2c8d8c45ea"
+  },
+  "likes": {
+    "id_user": "user_id_12345",
+    "id_tweet": "666b3883cd722090ddc5f9e4"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b43ce4f3b8a2c8d8c45eb"
+  },
+  "likes": {
+    "id_user": "666b3883cd722090ddc5f9e4",
+    "id_tweet": "666b3883cd722090ddc5f9e4"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b44354f3b8a2c8d8c45ec"
+  },
+  "likes": {
+    "id_user": null,
+    "id_tweet": "666b3883cd722090ddc5f9e4"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b443b4f3b8a2c8d8c45ed"
+  },
+  "likes": {
+    "id_user": null,
+    "id_tweet": "666b3883cd722090ddc5f9e4"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b44464f3b8a2c8d8c45ee"
+  },
+  "likes": {
+    "id_user": null,
+    "id_tweet": "666b419207895afa58f3fd9f"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b44464f3b8a2c8d8c45ef"
+  },
+  "likes": {
+    "id_user": null,
+    "id_tweet": "666b419a07895afa58f3fda0"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b44534f3b8a2c8d8c45f0"
+  },
+  "likes": {
+    "id_user": null,
+    "id_tweet": "666b419207895afa58f3fd9f"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b44554f3b8a2c8d8c45f1"
+  },
+  "likes": {
+    "id_user": null,
+    "id_tweet": "666b419a07895afa58f3fda0"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b447c4f3b8a2c8d8c45f2"
+  },
+  "likes": {
+    "id_user": null,
+    "id_tweet": "666b3883cd722090ddc5f9e4"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b447d4f3b8a2c8d8c45f3"
+  },
+  "likes": {
+    "id_user": null,
+    "id_tweet": "666b419207895afa58f3fd9f"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b44974f3b8a2c8d8c45f4"
+  },
+  "likes": {
+    "id_user": null,
+    "id_tweet": "666b419207895afa58f3fd9f"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b44a54f3b8a2c8d8c45f5"
+  },
+  "likes": {
+    "id_user": null,
+    "id_tweet": "666b419a07895afa58f3fda0"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b44ba4f3b8a2c8d8c45f6"
+  },
+  "likes": {
+    "id_user": null,
+    "id_tweet": "666b419a07895afa58f3fda0"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b44fd4f3b8a2c8d8c45f7"
+  },
+  "likes": {
+    "id_user": null,
+    "id_tweet": "666b3883cd722090ddc5f9e4"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b45204f3b8a2c8d8c45f8"
+  },
+  "likes": {
+    "id_user": null,
+    "id_tweet": "666b3883cd722090ddc5f9e4"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b455b4f3b8a2c8d8c45f9"
+  },
+  "likes": {
+    "id_user": null,
+    "id_tweet": "666b419207895afa58f3fd9f"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b45794f3b8a2c8d8c45fa"
+  },
+  "likes": {
+    "id_user": null,
+    "id_tweet": "666b419a07895afa58f3fda0"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b46554f3b8a2c8d8c45fb"
+  },
+  "likes": {
+    "id_user": "666b3836cd722090ddc5f9dc",
+    "id_tweet": "666b3883cd722090ddc5f9e4"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b46594f3b8a2c8d8c45fc"
+  },
+  "likes": {
+    "id_user": "666b3836cd722090ddc5f9dc",
+    "id_tweet": "666b3883cd722090ddc5f9e4"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b46644f3b8a2c8d8c45fd"
+  },
+  "likes": {
+    "id_user": "666b3836cd722090ddc5f9dc",
+    "id_tweet": "666b419a07895afa58f3fda0"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b46644f3b8a2c8d8c45fe"
+  },
+  "likes": {
+    "id_user": "666b3836cd722090ddc5f9dc",
+    "id_tweet": "666b41bf8c65fa7b6eec90f4"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b46684f3b8a2c8d8c45ff"
+  },
+  "likes": {
+    "id_user": "666b3836cd722090ddc5f9dc",
+    "id_tweet": "666b419207895afa58f3fd9f"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b46694f3b8a2c8d8c4600"
+  },
+  "likes": {
+    "id_user": "666b3836cd722090ddc5f9dc",
+    "id_tweet": "666b419a07895afa58f3fda0"
+  }
+},
+{
+  "_id": {
+    "$oid": "666b46724f3b8a2c8d8c4601"
+  },
+  "likes": {
+    "id_user": "666b3836cd722090ddc5f9dc",
+    "id_tweet": "666b41bf8c65fa7b6eec90f4"
+  }
+}]

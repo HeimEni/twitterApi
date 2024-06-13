@@ -1,0 +1,46 @@
+[{
+  "_id": {
+    "$oid": "666b3883cd722090ddc5f9e4"
+  },
+  "user_id": null,
+  "text": "This is a tweet",
+  "is_reply": false,
+  "reply_to_tweet_id": null,
+  "created_at": null,
+  "nb_like": 0,
+  "nb_retweet": 0,
+  "nb_reply": 0
+},
+{
+  "_id": {
+    "$oid": "666b419207895afa58f3fd9f"
+  },
+  "text": "aaaa",
+  "user_id": null,
+  "is_reply": false,
+  "reply_to_tweet_id": null,
+  "created_at": "2024-06-13T12:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "666b419a07895afa58f3fda0"
+  },
+  "text": "Wesh",
+  "user_id": null,
+  "is_reply": false,
+  "reply_to_tweet_id": null,
+  "created_at": "2024-06-13T12:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "666b41bf8c65fa7b6eec90f4"
+  },
+  "text": "AAAAffff",
+  "user_id": null,
+  "is_reply": false,
+  "reply_to_tweet_id": null,
+  "created_at": "2024-06-13T12:00:00Z",
+  "nb_like": 0,
+  "nb_retweet": 0,
+  "nb_reply": 0
+}]
