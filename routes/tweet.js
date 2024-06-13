@@ -1,4 +1,4 @@
-const {getTweetById, getAllTweet, getAllTweetByUserId} = require('../services/dbService')
+const {createTweet,getTweetById, getAllTweet, getAllTweetByUserId} = require('../services/dbService')
 var express = require('express');
 var router = express.Router();
 /* GET home page. */
@@ -11,6 +11,9 @@ router.get('/byIdUser', async function (req, res, next) {
 });
 router.get('/byId', async function (req, res, next) {
     res.json(await getTweetById(req.query.id));
+});
+router.post('/new', async function (req, res, next) {
+    res.json(await createTweet(req.body.text, req.body.id_user));
 });
 
 module.exports = router;
