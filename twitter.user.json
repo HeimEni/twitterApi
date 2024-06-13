@@ -1,0 +1,14 @@
+[{
+  "_id": "user_id_12345",
+  "username": "sampleuser",
+  "name": "Sample User",
+  "bio": "This is a sample bio.",
+  "location": "Sample Location",
+  "website": "http://example.com",
+  "created_at": "2020-01-01T12:00:00Z",
+  "followers_count": 100,
+  "following_count": 50,
+  "tweets_count": 200,
+  "likes_count": 300,
+  "profile_image_url": "http://example.com/profile.jpg"
+}]
