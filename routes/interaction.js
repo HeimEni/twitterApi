@@ -1,4 +1,4 @@
-const {createShare, reply,createLike,getAllReplyByTweetId, getAllLikeByTweetId, haveLike} = require('../services/dbService')
+const {createRetweet, reply,createLike,getAllReplyByTweetId, getAllLikeByTweetId, haveLike} = require('../services/dbService')
 const {login, register} = require('../services/accountService')
 var express = require('express');
 const {json} = require("express");
@@ -14,10 +14,9 @@ router.get('/like', async function (req, res, next) {
 });
 router.post('/like/new', async function (req, res, next) {
     await createLike(req.body.tweet_id, req.body.user_id);
-    // res.json({})
 });
 router.post('/share', async function (req, res, next) {
-    await createShare(req.body.tweet_id, req.body.user_id);
+    await createRetweet(req.body.tweet_id, req.body.user_id);
     // res.json({})
 });
 router.post('/reply', async function (req, res, next) {

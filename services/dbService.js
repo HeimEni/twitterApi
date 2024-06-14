@@ -1,5 +1,6 @@
 const {MongoClient, ServerApiVersion} = require('mongodb');
-const {log} = require("debug");
+var ObjectId = require('mongodb').ObjectId;
+
 const uri = "mongodb://localhost:27017";
 
 const client = new MongoClient(uri, {
@@ -35,6 +36,28 @@ async function getAllUsers() {
     try {
         await client.connect();
         return await client.db("twitter2").collection("user").find().toArray();
+    } finally {
+        await client.close();
+    }
+}
+
+async function createRetweet(user_id, tweet_id) {
+    try {
+        await client.connect();
+        if ((await client.db("twitter2").collection("retweet").find(
+            {"user_id": user_id, "tweet_id": tweet_id}
+        ).toArray()).length === 0) {
+            await client.db("twitter2").collection("tweet").updateOne(
+                {"_id": new ObjectId(tweet_id)},
+                {$inc: {nb_retweet: +1}})
+            return await client.db("twitter2").collection("retweet").insertOne(
+                {
+                    "id_user": user_id,
+                    "id_tweet": tweet_id,
+                    "created_at": Date.now()
+                }
+            );
+        }
     } finally {
         await client.close();
     }
@@ -126,17 +149,28 @@ async function getAllRetweetByTweetId(id) {
 async function createLike(tweet_id, user_id) {
     try {
         await client.connect();
-        client.db("twitter2").collection("tweet").updateOne(
-            {"tweet_id": tweet_id},
-            {$inc: { nb_like: +1 }})
-        return await client.db("twitter2").collection("like").insertOne({
-                likes: {
-                    id_user: user_id,
-                    id_tweet: tweet_id,
+        console.log(tweet_id + " " + user_id)
+        console.log(await client.db("twitter2").collection("like").find(
+            {"likes": {
+            "id_tweet": tweet_id,
+            "id_user": user_id}
+        }).toArray())
+        if ((await client.db("twitter2").collection("tweet").find({
+            "tweet_id": tweet_id,
+            "user_id": user_id
+        }).toArray()).length === 0) {
+            await client.db("twitter2").collection("tweet").updateOne(
+                {"_id": new ObjectId(tweet_id)},
+                {$inc: {nb_like: +1}})
+            return await client.db("twitter2").collection("like").insertOne({
+                    likes: {
+                        id_user: user_id,
+                        id_tweet: tweet_id,
 
+                    }
                 }
-            }
-        ).catch(log);
+            ).catch();
+        }
     } finally {
         await client.close();
     }
@@ -146,11 +180,11 @@ async function reply(text, tweet_id) {
     try {
         await client.connect();
         return await client.db("twitter2").collection("tweet").insertOne({
-                    "text": text,
-                    "user_id": localStorage.getItem("user").at(0),
-                    "is_reply": true,
-                    "reply_to_tweet_id": tweet_id,
-                    "created_at": Date.now(),
+                "text": text,
+                "user_id": localStorage.getItem("user").at(0),
+                "is_reply": true,
+                "reply_to_tweet_id": tweet_id,
+                "created_at": Date.now(),
             }
         ).catch(log);
     } finally {
@@ -163,9 +197,9 @@ async function retweet(tweet_id) {
         await client.connect();
         return await client.db("twitter2").collection("retweet").insertOne(
             {
-                        id_user: localStorage.getItem("user"),
-                        tweet_id: tweet_id,
-                        created_at: new Date()
+                id_user: localStorage.getItem("user"),
+                tweet_id: tweet_id,
+                created_at: new Date()
             }
         ).catch(log);
     } finally {
@@ -174,6 +208,7 @@ async function retweet(tweet_id) {
 }
 
 module.exports = {
+    createRetweet,
     createTweet,
     reply,
     retweet,
